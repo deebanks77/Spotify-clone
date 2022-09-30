@@ -1,7 +1,7 @@
 {
   "name": "spotify-app",
   "version": "0.1.0",
-  "homepage": "http://deebanks77.github.io/spotify-clone",
+  "homepage": "http://deebanks77.github.io/Spotify-clone",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
