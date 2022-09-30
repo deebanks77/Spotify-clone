@@ -12,13 +12,10 @@ import axios from "axios";
 function Sidebar() {
   const [{ playlists, token, playlistId }, dispatch] = useSpotifyContextValue();
 
-  console.log("idInfo sidebar", playlistId);
-  // console.log("idInfo 1 sidebar", `${playlistId && playlistId[0].id}`);
-
   const changeCurrentPlaylist = (selectedPlaylistId) => {
     dispatch({
       type: "SET_PLAYLIST_ID",
-      selectedPlaylistId: selectedPlaylistId,
+      playlistId: selectedPlaylistId,
     });
   };
 
