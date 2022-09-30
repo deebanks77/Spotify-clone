@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./Header.module.css";
-import SearchIcon from "@mui/icons-material/Search";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";

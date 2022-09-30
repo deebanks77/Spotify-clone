@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useSpotifyContextValue } from "../../store/spotify_context";
 import classes from "./Body.module.css";
 import Header from "../header/Header";

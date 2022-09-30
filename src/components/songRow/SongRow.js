@@ -14,8 +14,6 @@ function SongRow(props) {
     track_number: track.track_number,
   };
 
-  console.log(trackDetails);
-
   const msToMinuteAndSeconds = (ms) => {
     const minutes = Math.floor(ms / 60000);
     const seconds = ((ms % 60000) / 1000).toFixed(0);
