@@ -37,7 +37,6 @@ function Body(props) {
   if (playlist) {
     track = playlist.tracks.items;
   }
-  // console.log(track);
 
   const changeState = async () => {
     const state = playerState ? "pause" : "play";

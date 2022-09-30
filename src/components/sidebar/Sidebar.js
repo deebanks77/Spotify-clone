@@ -10,8 +10,10 @@ import { useSpotifyContextValue } from "../../store/spotify_context";
 import axios from "axios";
 
 function Sidebar() {
-  const [{ playlists, token, selectedPlaylistId }, dispatch] =
-    useSpotifyContextValue();
+  const [{ playlists, token, playlistId }, dispatch] = useSpotifyContextValue();
+
+  console.log("idInfo sidebar", playlistId);
+  // console.log("idInfo 1 sidebar", `${playlistId && playlistId[0].id}`);
 
   const changeCurrentPlaylist = (selectedPlaylistId) => {
     dispatch({
@@ -19,28 +21,29 @@ function Sidebar() {
       selectedPlaylistId: selectedPlaylistId,
     });
   };
-  // console.log(selectedPlaylistId);
 
   useEffect(() => {
-    const getNewPlaylist = async () => {
-      const response = await axios.get(
-        `https://api.spotify.com/v1/playlists/${selectedPlaylistId}`,
-        {
-          headers: {
-            Authorization: "Bearer " + token,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const _playlist = response.data;
-      // console.log("playlist sidebar", _playlist);
-      dispatch({
-        type: "SET_PLAYLIST",
-        playlist: _playlist,
-      });
-    };
-    getNewPlaylist();
-  }, [token, dispatch, selectedPlaylistId]);
+    if (playlistId) {
+      const getNewPlaylist = async () => {
+        const response = await axios.get(
+          `https://api.spotify.com/v1/playlists/${playlistId}`,
+          {
+            headers: {
+              Authorization: "Bearer " + token,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const _playlist = response.data;
+        // console.log("playlist sidebar", _playlist);
+        dispatch({
+          type: "SET_PLAYLIST",
+          playlist: _playlist,
+        });
+      };
+      getNewPlaylist();
+    }
+  }, [token, dispatch, playlistId]);
 
   return (
     <div className={classes.sidebar}>
@@ -72,4 +75,4 @@ function Sidebar() {
   );
 }
 
-export default React.memo(Sidebar);
+export default Sidebar;

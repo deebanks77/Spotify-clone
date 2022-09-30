@@ -12,7 +12,7 @@ import axios from "axios";
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [{ user, token, playlists, playing }, dispatch] =
+  const [{ user, token, playlists, playing, playlistId }, dispatch] =
     useSpotifyContextValue();
 
   useEffect(() => {
@@ -44,9 +44,17 @@ function App() {
       spotify.getUserPlaylists().then((playlists) => {
         const { items } = playlists;
 
+        const idInfo = items.map((item) => {
+          return { id: item.id, href: item.href };
+        });
+
         dispatch({
           type: "SET_PLAYLISTS",
           playlists: items,
+        });
+        dispatch({
+          type: "SET_PLAYLIST_ID",
+          playlistId: idInfo[0].id,
         });
       });
 

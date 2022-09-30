@@ -8,4 +8,4 @@ function Footer() {
   return <div>{playing && <CurrentTrack playing={playing} />}</div>;
 }
 
-export default React.memo(Footer);
+export default Footer;

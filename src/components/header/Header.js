@@ -72,4 +72,4 @@ function Header({ headerBackground, headerPlayer }) {
   );
 }
 
-export default React.memo(Header);
+export default Header;

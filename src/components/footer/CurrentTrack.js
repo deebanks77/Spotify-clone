@@ -159,4 +159,4 @@ function CurrentTrack() {
   );
 }
 
-export default React.memo(CurrentTrack);
+export default CurrentTrack;

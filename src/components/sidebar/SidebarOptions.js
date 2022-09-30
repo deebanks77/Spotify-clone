@@ -20,4 +20,4 @@ function SidebarOptions(props) {
   );
 }
 
-export default React.memo(SidebarOptions);
+export default SidebarOptions;
