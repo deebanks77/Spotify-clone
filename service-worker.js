@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/spotify-clone/precache-manifest.4d9a6c5cf73b2cca7107e2b235b0d0f2.js"
+  "/Spotify-clone/precache-manifest.806ceba54a7dcb06ca612161030f75f9.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/spotify-clone/index.html", {
+workbox.routing.registerNavigationRoute("/Spotify-clone/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
