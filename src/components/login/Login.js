@@ -1,8 +1,9 @@
 import React from "react";
 import classes from "./Login.module.css";
-import { loginUrl } from "../../store/spotify";
+import { useComponent } from "../../store/spotify";
 
 function Login() {
+const { loginUrl } = useComponent();
   return (
     <div className={classes.login}>
       <img
