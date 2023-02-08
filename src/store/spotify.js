@@ -6,11 +6,6 @@ import { useEffect, useState } from "react";
 
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 
-// const redirectUri = "http://localhost:3000/";
-// const redirectUri = "http://deebanks77.github.io/Spotify-clone/";
-const redirectUri = `${window.location.origin}/`;
-// console.log(redirectUri);
-
 const redirectUri = `${window.location.origin}/`;
 // const redirectUri = "http://localhost:3000/";
 console.log(redirectUri);
