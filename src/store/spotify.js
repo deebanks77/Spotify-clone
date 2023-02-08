@@ -1,8 +1,9 @@
 // https://developer.spotify.com/documentation/web-playback-sdk/quick-start/#
 import { useEffect, useState } from "react";
-// click login button
-// redirect to spotify login page
-// redirect to home page once logged in
+// steps to login
+// 1 click login button
+// 2 redirect to spotify login page
+// 3 redirect to home page once logged in
 
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 
